@@ -36,9 +36,10 @@ Agent actions
    ````uv sync````
 
 3. add an .env file to the folder you cloned this repository to in step 1, and add you Gemini API key here as below\
-   ````GOOGLE_API_KEY=your_actual_api_key_here````
+   ````GOOGLE_API_KEY=your_actual_api_key_here````\
+   ````AGENT_URL=http://localhost9009````
 
-4. Run the server\
+5. Run the server\
    ````uv run src/server.py````
 
 # Attribution
