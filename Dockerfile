@@ -16,8 +16,9 @@ RUN uv add python-dotenv gymnasium \
 RUN mkdir -p /tmp/tau2-bench && \
     curl -L https://github.com/sierra-research/tau2-bench/archive/refs/heads/main.tar.gz | \
     tar -xz --strip-components=1 -C /tmp/tau2-bench && \
-    mkdir -p ./.venv/lib/python3.13/data/tau2 && \
-    cp -r /tmp/tau2-bench/src/tau2/domains ./.venv/lib/python3.13/data/tau2/ && \
+    SITE_PACKAGES=$(uv run python -c 'import site; print(site.getsitepackages()[0])') && \
+    mkdir -p "${SITE_PACKAGES}/data/tau2" && \
+    cp -r /tmp/tau2-bench/src/tau2/domains "${SITE_PACKAGES}/data/tau2/" && \
     rm -rf /tmp/tau2-bench
 
 ENTRYPOINT ["uv", "run", "src/server.py"]
