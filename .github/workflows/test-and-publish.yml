@@ -12,9 +12,6 @@ jobs:
   test-and-publish:
     runs-on: ubuntu-latest
 
-    # These permissions are required for the workflow to:
-    # - Read repository contents (checkout code)
-    # - Write to GitHub Container Registry (push Docker images)
     permissions:
       contents: read
       packages: write
