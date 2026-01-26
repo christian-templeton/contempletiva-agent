@@ -1,14 +1,12 @@
 FROM ghcr.io/astral-sh/uv:python3.13-bookworm
 
-RUN adduser agent
-USER agent
-WORKDIR /home/agent
+WORKDIR /app
 
-COPY --chown=agent:agent pyproject.toml uv.lock README.md ./
-COPY --chown=agent:agent src src
+COPY pyproject.toml uv.lock README.md ./
+COPY src src
 
 RUN \
-    --mount=type=cache,target=/home/agent/.cache/uv,uid=1000 \
+    --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked
 
 RUN uv add python-dotenv gymnasium
