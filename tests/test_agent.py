@@ -174,7 +174,8 @@ def test_agent_card(agent):
 @pytest.mark.parametrize("streaming", [True, False])
 async def test_message(agent, streaming):
     """Test that agent returns valid A2A message format."""
-    events = await send_text_message("Hello", agent, streaming=streaming)
+    valid_input = '<white_agent_url>http://dummy.com</white_agent_url><env_config>{"domain": "retail"}</env_config>'
+    events = await send_text_message(valid_input, agent, streaming=streaming)
 
     all_errors = []
     for event in events:
