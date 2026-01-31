@@ -8,7 +8,7 @@ Contempletiva Agent: The assessment manager that administers Tau-Bench evaluatio
 - Orchestrates the conversation between the benchmark and the target agent
 - Evaluates responses and reports results
 
-Activa Agent: The target agent being tested (COMING MARCH 2026)
+Activa Agent: The target agent being tested (https://github.com/christian-templeton/baseline)
 - Can be any agent that implements the A2A protocol
 - Receives task instructions and responds with tool calls or messages
 - Operates without knowledge of being benchmarked
