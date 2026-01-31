@@ -1,5 +1,5 @@
 [project]
-name = "green-agent-template"
+name = "activa-agent"
 version = "0.1.0"
 description = "A template for A2A green agents"
 readme = "README.md"

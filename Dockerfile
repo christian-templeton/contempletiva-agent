@@ -24,4 +24,4 @@ ENV TAU2_DATA_DIR=/app/data
 
 ENTRYPOINT ["uv", "run", "src/server.py"]
 CMD ["--host", "0.0.0.0"]
-EXPOSE 9009
+EXPOSE 9002
