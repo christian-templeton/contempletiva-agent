@@ -12,6 +12,8 @@ dependencies = [
     "gymnasium",
     "tau2 @ git+https://github.com/sierra-research/tau2-bench",
     "agentify-tau-bench @ git+https://github.com/sierra-research/tau2-bench#subdirectory=src/experiments/agentify_tau_bench",
+    "litellm>=1.0.0",
+    "loguru>=0.7.0",
 ]
 
 [project.optional-dependencies]
