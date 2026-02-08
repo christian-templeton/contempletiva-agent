@@ -25,7 +25,7 @@ Agent actions
 - Evaluates performance using Tau-Bench's scoring system
 - Returns the results
 
-3. The Activa Agent will respond to messages using its tools, unaware it's being evaluated.
+3. The (pro)active agent will respond to messages using its tools, unaware it's being evaluated.
 
 # Project Structure
 
@@ -51,7 +51,7 @@ Agent actions
 # Configuring and Running
 
 1. Clone locally\
-   ````git clone https://github.com/christian-templeton/contemplate-agent````
+   ````git clone https://github.com/christian-templeton/contempletiva-agent````
    
 2. Install dependencies\
    ````uv sync````
@@ -68,7 +68,7 @@ Agent actions
 
 # Contributing and Testing
 
-1. Add Activa (white) agents you want to evaluate\
+1. Add (pro)active (white) agents you want to evaluate\
    See example at https://github.com/agentbeats/agentify-example-tau-bench/blob/main/src/white_agent/agent.py
 
 2. Install test dependencies\
